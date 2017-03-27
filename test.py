@@ -1,34 +1,34 @@
-
-# stepwise Freezing and Thawing
-class FrozenUnfrozen(object):
-    """
-    """
-    def __init__(self):
-        """ Constructof for FrozenUnfrozen
-        """
-        self.__repr = {}                # dictionary
-        self.__frozen = False
-    def __getitem__(self, key):
-        return self.__repr[key]
-    def __setitem__(self, key, value):
-        if self.__frozen:
-            raise KeyError("Cannot chanage key %r" % key)
-        self.__repr[key] = value
-    def freeze(self):
-        self.__frozen = True
-    def unfreeze(self):
-        self.__frozen = False
-
-fuf = FrozenUnfrozen()
-x = fuf["a"] = 100
-print(x)
-# fuf.freeze()
-fuf["a"] = 200
-fuf.unfreeze()
-fuf["a"] = 300
-x = fuf["a"]
-print(x)
-
+#
+# # stepwise Freezing and Thawing
+# class FrozenUnfrozen(object):
+#     """
+#     """
+#     def __init__(self):
+#         """ Constructof for FrozenUnfrozen
+#         """
+#         self.__repr = {}                # dictionary
+#         self.__frozen = False
+#     def __getitem__(self, key):
+#         return self.__repr[key]
+#     def __setitem__(self, key, value):
+#         if self.__frozen:
+#             raise KeyError("Cannot chanage key %r" % key)
+#         self.__repr[key] = value
+#     def freeze(self):
+#         self.__frozen = True
+#     def unfreeze(self):
+#         self.__frozen = False
+#
+# fuf = FrozenUnfrozen()
+# x = fuf["a"] = 100
+# print(x)
+# # fuf.freeze()
+# fuf["a"] = 200
+# fuf.unfreeze()
+# fuf["a"] = 300
+# x = fuf["a"]
+# print(x)
+#
 
 
 
