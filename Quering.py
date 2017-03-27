@@ -12,6 +12,8 @@ for i in range(20):
     my_list.append(data)
 
 xxx = ([x for x in my_list  if x.n > 14 and x.n <= 18])
+
+
 table0 = range(0, 21)
 print (table0)
 table1 = [x for x in table0 if x > 13 and x <= 18]
@@ -20,6 +22,8 @@ print ('First: %r' % table1[0])
 print (table1[:2])
 print ('Last: %r' % table1[-1])
 print (table1[-2:])
+
+
 
 a=range(17)
 print(a)
